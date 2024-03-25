@@ -8,7 +8,6 @@ import java.util.Scanner;
 import com.alameendev.librarymanagement.db.LibraryDatabase;
 import com.alameendev.librarymanagement.login.LoginView;
 import com.alameendev.librarymanagement.model.IssuedBooks;
-import com.alameendev.librarymanagement.utils.Input;
 
 public class IssueBooksView {
 

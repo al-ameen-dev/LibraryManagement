@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 import com.alameendev.librarymanagement.login.LoginView;
 import com.alameendev.librarymanagement.model.Customer;
-import com.alameendev.librarymanagement.utils.Input;
 import com.alameendev.librarymanagement.validationutils.Validation;
 
 public class CustomerView {

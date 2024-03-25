@@ -5,7 +5,6 @@ import java.util.Scanner;
 import com.alameendev.librarymanagement.LibraryManagement;
 import com.alameendev.librarymanagement.db.LibraryDatabase;
 import com.alameendev.librarymanagement.librarysetup.LibrarySetupView;
-import com.alameendev.librarymanagement.utils.Input;
 
 public class LoginView {
 
@@ -17,10 +16,10 @@ public class LoginView {
 
 	public void init() {
 		LibraryManagement lm = LibraryManagement.getInstance();
-		String welcomeString = lm.getAppname() + " -----\nv ----- "+ lm.getAppVersion();
-		String welcomeMessage = String.format("%n%s%n",welcomeString);
+		String welcomeString = lm.getAppname() + " -----\nv ----- " + lm.getAppVersion();
+		String welcomeMessage = String.format("%n%s%n", welcomeString);
 		showAlert(welcomeMessage);
-		Scanner scanner = Input.in().getScanner();
+		Scanner scanner = new Scanner(System.in);
 		System.out.print("\nPlease login to proceed.\n");
 		System.out.print("\nEnter the user name:");
 		String userName = scanner.next();
@@ -38,9 +37,9 @@ public class LoginView {
 		LibraryManagement lm = LibraryManagement.getInstance();
 		System.out.flush();
 		String loginString = "Login successful....";
-		String welcomeString = lm.getAppname() + " -v "+ lm.getAppVersion();
-		String userString = " Welcome "+LibraryDatabase.getInstance().getAdmin().getName();
-		String welcomeMessage = String.format("%n%s %n%s %n%s %n",loginString,welcomeString,userString);
+		String welcomeString = lm.getAppname() + " -v " + lm.getAppVersion();
+		String userString = " Welcome " + LibraryDatabase.getInstance().getAdmin().getName();
+		String welcomeMessage = String.format("%n%s %n%s %n%s %n", loginString, welcomeString, userString);
 		showAlert(welcomeMessage);
 		LibrarySetupView librarySetupView = new LibrarySetupView();
 		librarySetupView.init();
