@@ -1,7 +1,13 @@
 package com.alameendev.librarymanagement.model;
 
-public class UniqueId {
+import java.io.Serializable;
 
+public class UniqueId implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private long bookId;
 	private long customerId;
 	private long adminId;
